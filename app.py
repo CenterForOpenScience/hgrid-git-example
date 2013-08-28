@@ -120,7 +120,7 @@ def add_file():
 def git_hist():
     import subprocess
     try:
-        return subprocess.check_output(('git', 'hist'), cwd=repo_path)
+        return subprocess.check_output(('git', 'log'), cwd=repo_path)
     except subprocess.CalledProcessError:
         return ''
 
